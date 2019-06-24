@@ -10,8 +10,6 @@ std::chrono::duration<double> trial_fun()
 {
     auto start = std::chrono::high_resolution_clock::now();
 
-
-
     auto finish = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> elapsed = finish - start;
 
@@ -43,8 +41,11 @@ bool IsPathExist(const std::string &s)
 
 int main()
 {
+
+    std::cout << "TEST TEST TEST" << std::endl;
+
     /* create folder for storing txt files */
-    const std::string path = "/home/pablo.say54/graphene/LibOS/shim/test/native";
+    const std::string path = "/home/pablo.say54/graphene/LibOS/shim/test/native/data_files";
     if (!IsPathExist(path))
     {
         const int dir_err = mkdir("data_files", S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
