@@ -1,9 +1,11 @@
 #include <iostream>
+#include <stdio.h>
 #include <fstream>
 #include <string>
 #include <chrono>
 #include <vector>
 #include <cmath>
+#include <unistd.h>
 #include <sys/stat.h>
 #include <sys/mman.h>
 
