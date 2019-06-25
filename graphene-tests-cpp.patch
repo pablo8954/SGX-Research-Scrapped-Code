@@ -1,0 +1,26 @@
+diff --git a/LibOS/shim/test/Makefile b/LibOS/shim/test/Makefile
+index 5787ea1..8b54197 100644
+--- a/LibOS/shim/test/Makefile
++++ b/LibOS/shim/test/Makefile
+@@ -17,6 +17,8 @@ CC = gcc
+ CXX = g++
+ CFLAGS 	= -Wall -std=gnu99
+ CFLAGS-debug = $(CFLAGS) -I$(SHIMDIR)/../include -I$(PALDIR)/../include/pal -I$(PALDIR)/../lib
++CXXFLAGS = -Wall -std=c++11
++CXXFLAGS-debug = $(CXXFLAGS) -I$(SHIMDIR)/../include -I$(PALDIR)/../include/pal -I$(PALDIR)/../lib
+ LDFLAGS	=
+ LDFLAGS-debug = $(LDFLAGS) -L$(SHIMDIR) -L$(PALDIR) -Wl,-rpath-link=$(abspath $(RUNTIME))
+ 
+diff --git a/LibOS/shim/test/native/Makefile b/LibOS/shim/test/native/Makefile
+index eba4205..4bcf6bd 100644
+--- a/LibOS/shim/test/native/Makefile
++++ b/LibOS/shim/test/native/Makefile
+@@ -17,7 +17,7 @@ $(c_executables): %: %.c
+ 
+ $(cxx_executables): %: %.cpp
+ 	@echo [ $@ ]
+-	@$(CC) $(CFLAGS) $(if $(findstring .libos,$@),$(CFLAGS-libos),) -o $@ $< \
++	@$(CXX) $(CXXFLAGS) $(if $(findstring .libos,$@),$(CFLAGS-libos),) -o $@ $< \
+ 	$(shell echo $@ | sed 's/^[^\.]*//g' | sed 's/\./ -l/g')
+ 
+ static: %: %.c
