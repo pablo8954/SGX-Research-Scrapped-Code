@@ -5,6 +5,7 @@
 #include <vector>
 #include <cmath>
 #include <sys/stat.h>
+#include <sys/mman.h>
 
 std::chrono::duration<double> trial_fun()
 {
