@@ -9,4 +9,4 @@ Currently, this file is incompatable with Graphene OS.
 # timer_remake.c
 timer_remake.c serves the same purpose as the script research_timer. This file
 can be executed using Graphene OS, however it has conficts with the Graphene OS makefile.
-To circumvent this issue, run gcc -o timer_remake timer_remake.c -lm prior to running SGX=1 and SGX_RUN=1.
+To circumvent this issue, run `gcc -o timer_remake timer_remake.c -lm` prior to running `SGX=1` and `SGX_RUN=1`.
