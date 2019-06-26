@@ -12,8 +12,11 @@ struct stat st = {0};
 double timer()
 {
     struct timespec start, end;
-    clock_gettime(CLOCK_REALTIME, &start); //TODO: verify that start & end are both being re-written each time properly
-
+    clock_gettime(CLOCK_REALTIME, &start);
+    
+    /* Place code which you 
+        want to time here */ 
+    
     clock_gettime(CLOCK_REALTIME, &end);
 
     //time_spent = end - start
