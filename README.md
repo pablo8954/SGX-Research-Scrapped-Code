@@ -1,5 +1,5 @@
 # SGX-Research
-SGX-Research documents all files and work related to SGX Research at Texas A&M. 
+SGX-Research documents files and work related to SGX Research at Texas A&M. 
 
 # research_timer.cpp
 research_timer.cpp is a script which times function execution. Additionally, the 
