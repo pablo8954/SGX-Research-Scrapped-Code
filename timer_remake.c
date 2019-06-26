@@ -9,7 +9,6 @@
 struct stat st = {0};
 
 /* runs code we want to time, returns execution time */
-
 double timer()
 {
     struct timespec start, end;
@@ -60,7 +59,7 @@ int main()
     int num_trials = 0;
     double time_sum = 0.0;
     double average = 0.0;
-
+    
     printf("Enter the number of trials to run: \n");
     scanf("%d", &num_trials);
 
@@ -68,6 +67,7 @@ int main()
     double *a = create_array(a_size);
 
     printf( "%d \n", num_trials);
+    
     for (int i = 0; i < num_trials; i++)
     {
         a[i] = timer();
@@ -76,7 +76,6 @@ int main()
     average = time_sum/num_trials;
 
     std_calc(time_sum, a, num_trials, average);
-    // printf("Average: %f\n", average);
     
     free(a);
     return 0;
